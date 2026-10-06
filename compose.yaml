@@ -1,0 +1,10 @@
+services:
+  hamava:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - hamava-data:/app/data
+    restart: unless-stopped
+volumes:
+  hamava-data:
